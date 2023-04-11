@@ -1,0 +1,42 @@
+# Cria produto 1
+POST http://localhost:3332/products
+Content-Type: application/json
+
+{
+  "name" : "Caneta preta",
+  "price": 3
+}
+
+###
+# Cria produto 2
+POST http://localhost:3332/products
+Content-Type: application/json
+
+{
+  "name" : "Caderno 96 folhas",
+  "price": 45
+}
+
+
+###
+# Ver todos os produtos
+GET http://localhost:3332/products
+
+###
+
+# Ver um unico produto utilizando o id
+GET http://localhost:3332/products/ed4a3a1d-e6e8-4f00-8897-7aa32c5fb6a4
+
+###
+# Edita um produto utilizando o id
+PUT  http://localhost:3332/products/2edf911e-cde3-489b-a5b3-c31eab3a9908
+Content-Type: application/json
+
+{
+  "name" : "Caderno 996 folhas",
+  "price": 999
+}
+
+###
+# Deleta um produto utilizando o id
+DELETE  http://localhost:3332/products/f4ce388c-c5df-4c00-aaf8-0b5441646c08
